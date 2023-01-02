@@ -16,6 +16,23 @@ const CircularProgressBar = () => {
         valueSuffix={'%'}
         duration={2000}
       />
+      <View style={styles.loader}>
+        <CircularProgress
+          value={97}
+          radius={120}
+          inActiveStrokeOpacity={0.5}
+          activeStrokeWidth={15}
+          inActiveStrokeWidth={20}
+          progressValueStyle={{fontWeight: '100', color: 'white'}}
+          activeStrokeSecondaryColor="yellow"
+          inActiveStrokeColor="black"
+          duration={5000}
+          dashedStrokeConfig={{
+            count: 50,
+            width: 4,
+          }}
+        />
+      </View>
     </View>
   );
 };
@@ -27,5 +44,10 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  loader: {
+    backgroundColor: '#222',
+    padding: 20,
+    marginTop: 50,
   },
 });
